@@ -1,0 +1,163 @@
+/*The MIT License (MIT)*/
+/*Copyright (c)2014 http://rossiss.com*/
+
+/*------- Clearfix -------*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
+}
+/*------- End of Clearfix -------*/
+
+/*----------- POSTCARD ------------*/
+body {
+	font-size: 25px;
+	font-family: 'BadScript', cursive;
+	color: #232323;
+	background: url( ../images/bg-grey.jpg) repeat; /*not relevant to postcard*/
+}
+
+@font-face {
+    font-family: 'BadScript';
+    src: url(../fonts/BadScript-Regular.ttf);
+}
+
+p {
+    line-height: 2em;
+}
+
+#contact-form {
+    text-align: center;
+}
+
+#postcard {
+    display: block;
+    width: 850px;
+    height: 450px;
+    border: 1px solid #A5A593;   
+    background: url(../images/bg-postcard.jpg) repeat;
+    box-shadow: 2px 2px 3px #A5A593;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+#left-side, #right-side {
+    float: left;
+    position: relative;
+    width: 390px;
+    height: 450px;
+    padding: 15px;
+}
+
+#vertical-line {
+    float: left;
+    width: 2px;
+    height: 400px;
+    margin-top: 25px;    
+    background-color: #A5A593;
+}
+
+textarea, input {
+    background-color: transparent;
+    font-size: 0.8em;
+    font-family: 'BadScript', cursive;
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For all Gecko based browsers */
+    box-sizing: border-box;
+}
+
+input {
+    width: 96%;
+    border: none;
+    border-bottom: 1px solid #A5A593;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea {
+    width: 96%;
+    height: 200px;
+    overflow: auto;
+}
+
+#stamp {
+    float: right;
+    display: block;
+}
+
+#contact-details {
+    float: left;
+    display: block;
+    width: 96%;
+    margin-left: 10px;
+}
+
+.underlined {
+    border-bottom: 1px solid #A5A593;
+}
+
+/*the sum input field*/
+#sum {
+    width: 40px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    font-weight: 600;
+    background-color: #fff;
+    outline: thin;
+    border: 1px solid #A5A593;
+}
+
+#send {
+    width: 100px;
+    height: 50px;
+    margin-left: 20px;
+    font-family: 'BadScript';
+    font-size: 1.1em;
+    line-height: 50px;    
+    box-shadow: 2px 2px 3px #A5A593;
+}
+
+#send:hover {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+/*----------- End of POSTCARD ------------*/
+
+
+/*------ Demo Page Style -------*/
+#wrapper {
+    width: 850px;
+    margin: 30px auto;
+}
+
+h1 {
+    font-size: 0.8em;
+    display: block;
+    height: 80px;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #A5A593;
+}
+/*------ End of Demo Page Style -------*/

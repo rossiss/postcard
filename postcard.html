@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Postcard from RossiSS.com</title>	
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="Postcard" />
+	<meta name="keywords" content="web design, postcard, form, html5, css3, Rossitsa Stancheva" />
+	<meta name="author" content="Rossitsa Stancheva" />
+	<link rel="stylesheet" type="text/css" href="styles/style.css" />
+	<link rel="stylesheet" type="text/css" href="styles/css-reset.css" />
+</head>
+<body>
+	<div id="wrapper">
+		<!-- Info -->
+		<h1>The code for this contact form as well as all the images are available to you for free. You can download the files from <a href="http://rossiss.com" target="_blank">rossiss.com</a>.</h1>
+		<!-- End of Info -->
+
+		<form id="contact-form" class="clearfix" action="mailto:your@mail.com" method="post" onsubmit="return sumCheck()">
+			<div id="postcard" >
+				<div id="right-side">
+					<div id="email-holder">
+						<label for="email">From:</label><br>
+						<input type="text" id="email" name="email" placeholder="your email" required autofocus>
+					</div>
+					<div id="subject-holder">
+						<label for="subject">About:</label><br>
+						<input type="text" id="subject" name="subject" placeholder="subject" required>
+					</div>
+					<div id="message-holder">
+						<label for="message">Message:</label><br>
+	    				<textarea id="message" name="message" placeholder="write me your thoughts" required></textarea>
+					</div>
+				</div>
+				<div id="vertical-line"></div>
+				<div id="left-side">
+					<img id="stamp" src="images/stamp.png" alt="postcard-stamp" />
+					<div id="contact-details">
+						<p>To:</p>
+						<p class="underlined">Your Name</p>
+						<p class="underlined">Your Email</p>
+						<p class="underlined">+359 *** *** ***</p>
+						<p class="underlined">Address</p>
+					</div>
+				</div>	        				
+			</div>
+			<label for="sum"><img src="images/sum.png" alt="sum-check"></label>
+			<input type="text" id="sum" name="sum" required>
+			<button id="send" type="submit" formaction="post" value="Send">Send</button>
+			<!-- <input id="send" type="submit" formaction="post" value="Send"> -->	
+		</form>
+	</div>
+	<script>
+		//form simple safety submit check only for the sum input
+		function sumCheck (form) {
+			var sum = document.forms["contact-form"]["sum"].value;
+			if (sum == 3) {
+				return true;
+			}
+			else {
+				alert("Incorrect sum! Try again");
+				return false;
+			};
+		};
+	</script>
+</body>
+</html>
